@@ -5,6 +5,8 @@ Requirements can be read in the feature files. These files can be found in src/t
 How to build and run:
 - Check out project and run java test class 'RunCukesTest.java' with following VM arguments:
 -Dphantomjs.binary.path=${workspace_location}/src/test/resources/phantomdriver/phantomjs
+Maybe it is needed in terminal run following command to be able to execute phantom driver:
+> chmod +x phantomjs
 
 - Report will be generated in target/cucumber-htmlreport/index.html
 
