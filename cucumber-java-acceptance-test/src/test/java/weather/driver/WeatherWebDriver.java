@@ -1,7 +1,5 @@
 package weather.driver;
 
-import static weather.hooks.Setup.weatherViewDriver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -55,5 +53,9 @@ public class WeatherWebDriver {
     
     public boolean elementIsVisible(String id) throws Throwable{
     	return webDriver.findElements(By.xpath("//*[@data-test='" + id + "']")).size() > 0;
+    }
+    
+    public void clickElement(String id) throws Throwable{
+    	webDriver.findElement(By.xpath("//*[@data-test='" + id + "']")).click();
     }
 }

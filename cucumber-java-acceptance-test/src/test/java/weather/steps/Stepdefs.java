@@ -1,6 +1,9 @@
 package weather.steps;
 
 import static weather.hooks.Setup.weatherViewDriver;
+import static weather.util.MapperUtil.TESTID;
+import static org.junit.Assert.fail;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -35,6 +38,13 @@ public class Stepdefs {
     	weatherViewDriver.clickEnter("city");
     }
     
+    @When("^user clicks on the ([^\"]*) day( again)?$")
+    public void userClicksOnDay(String day) throws Throwable{
+    	String testid = TESTID.get(day);
+    	if(testid == null) fail("Test id not found in mapper for value '" + day + "'");
+    	weatherViewDriver.clickElement(testid);
+    }
+    
     @When("^user introduces an unexpected location$")
     public void introduceUnexpectedLocation() throws Throwable {
     	introduceLocation("London");
@@ -65,6 +75,11 @@ public class Stepdefs {
 		if(weatherViewDriver.elementIsVisible(testId)){
 			throw new RuntimeException("Expected " + Integer.toString(days) + " days weather forecaste. Days visible: " + Integer.toString(i));
 		}
+    }
+    
+    @Then("^user can see 3 hourly forescast for the day selected$")
+    public void userCanSeeHourlyForecast() throws Throwable{
+    	
     }
     
     @Then("^message \"([^\"]*)\" appears$")
