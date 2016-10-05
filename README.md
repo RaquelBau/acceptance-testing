@@ -11,4 +11,8 @@ How to build and run:
 Given more time I would like to achieve:
 - Add more drivers to be able to run scenarios in different browsers
 - More validation scenarios (error scenarios when introducing invalid data, timeout received, invalid json or invalid data received...).
-- Scenarios about styles
+- Requirements about styles (icon displayed, size...)
+- Compare data showed with data retrieved from json (in test mode, from the json in data folder. Testing with real data we could get the response received from API and compare with data showed).
+- Check the hours in the hourly forecast with the expected ones.
+- Use examples when required to increase the coverage
+- Clarify how dominant values are calculated to write the requirements and test properly
