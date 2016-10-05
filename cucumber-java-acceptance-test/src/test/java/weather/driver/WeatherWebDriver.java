@@ -55,7 +55,26 @@ public class WeatherWebDriver {
     	return webDriver.findElements(By.xpath("//*[@data-test='" + id + "']")).size() > 0;
     }
     
+    public boolean elementXpathIsVisible(String xpath) throws Throwable{
+    	return webDriver.findElements(By.xpath(xpath)).size() > 0;
+    }
+    public int numberElements(String xpath) throws Throwable{
+    	return webDriver.findElements(By.xpath(xpath)).size();
+    }
+    
+    
     public void clickElement(String id) throws Throwable{
     	webDriver.findElement(By.xpath("//*[@data-test='" + id + "']")).click();
     }
+    
+    
+    public void sleep(int ms) {
+		
+		try {
+			Thread.sleep(ms);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+}
 }

@@ -30,10 +30,10 @@ Feature: User can see specific data in the daily forecast
 	Scenario: Future daily forecast shows summarised rainfall
 		Given user is in the weather application
 		When user introduces the location "Edinburgh" in the search box
-		Then next 4 days' daily forecasts show dominant rainfall	
+		Then next 4 days' daily forecasts show dominant rainfall for each day	
 		
 	Scenario: Daily forecast shows minimum and maxium temperature
-		Give user is in the weather application
+		Given user is in the weather application
 		When user introduces the location "Edinburgh" in the search box
 		Then daily forecast shows maximum temperature for each day
 		And daily forecast shows minimum temperature for each day	

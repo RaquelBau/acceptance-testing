@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 features={"src/test/resources/features"},
 plugin = {"pretty", "html:target/cucumber-htmlreport", "json:target/cucumberReport/cucumber.json"},
-tags={"@ra"}
+tags={"~@wip"}
 )
 public class RunCukesTest {
 }

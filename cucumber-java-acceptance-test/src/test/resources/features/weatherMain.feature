@@ -1,5 +1,5 @@
 Feature: User can see 5 days weather forecast and 3 hourly forecast for each day
-	@ra
+	
 	Scenario Outline: User can see 5 days weather forecast for a given location
 		Given user is in the weather application
 		When user introduces the location "<city>" in the search box
@@ -24,4 +24,8 @@ Feature: User can see 5 days weather forecast and 3 hourly forecast for each day
 		Examples:
 		|day|
 		|first|
+		|second|
+		|third|
+		|forth|
+		|fith|
 		
